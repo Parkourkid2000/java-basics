@@ -2,37 +2,37 @@
  * Converting Temperatures
  */
 
-let celcius = 10
-let fahrenheit = celcius * 1.8 + 32
+// let celcius = 10
+// let fahrenheit = celcius * 1.8 + 32
 
-console.log (fahrenheit)
+// console.log (fahrenheit)
 
-/**
- * Equality and Not equal
- */
+// /**
+//  * Equality and Not equal
+//  */
 
-let bool = "1" !== 1
+// let bool = "1" !== 1
 
-console.log (bool)
+// console.log (bool)
 
 /**
  * Conditionals
  */
 
-let subscribed = false
-let loggedIn = true
+// let subscribed = false
+// let loggedIn = true
 
-if (subscribed === true) {
-    console.log('show the video')
-}
+// if (subscribed === true) {
+//     console.log('show the video')
+// }
 
-else if (loggedIn === true) {
-    console.log ('upgrade to pro')
-}
+// else if (loggedIn === true) {
+//     console.log ('upgrade to pro')
+// }
 
-else {
-    console.log('please log in')
-}
+// else {
+//     console.log('please log in')
+// }
 
 // let cash = 30
 // let price = 40
@@ -71,15 +71,15 @@ else {
  * Truthy or Falsy
  */
 
-let val = ""
+// let val = ""
 
-if (val) {
-    console.log(!!val)
-}
+// if (val) {
+//     console.log(!!val)
+// }
 
-else {
-    console.log(!!val)
-}
+// else {
+//     console.log(!!val)
+// }
 
 /**
  * Ternary Operators
@@ -195,14 +195,79 @@ else {
 
 // console.log (convertCelsuisToFahrenheit(10));
 
-// function convertCelsuisToFahrenheit(celcuis) {
-//     return celcuis * 1.8 + 32
-    
+
+//SAME AS ABVE FUNCTION, BUT SHORTER CODE
+// function convertCelsuisToFahrenheit(celcius) {
+//      return celcius * 1.8 + 32
+//      
 // }
 
-const convertCelsuisToFahrenheit = () => {
-return "FES"
+// console.log (convertCelsuisToFahrenheit(0))
+
+//SECOND WAY TO INITIALIZE A FUNCTION
+// const convertCelsuisToFahrenheit = () => {
+// return "FES"
+// }
+
+
+// console.log (convertCelsuisToFahrenheit(10));
+
+// let arr = [20, 30, 40, 50, 100]
+
+// //first element of array:
+// console.log(arr[0]);
+
+// //last element of array:
+// console.log (arr[arr.length -1]);
+
+// // add element onto end of array:
+// arr.push(200)
+
+// LONG METHOD OF ARRAY FILTER  
+// let arr = [20, 30, 40, 50, 100]
+
+// let newArr = arr.filter((element) => {
+//     console.log(element)
+//     if (element < 50) {
+//     return true;}
+// })
+
+// console.log (newArr);
+
+//SHORT METHOD OF ARRAY FILTER
+// let arr = [20, 30, 40, 50, 100]
+
+//  let newArr = arr.filter(element => element < 50 )
+ 
+//   console.log (newArr);
+
+// let grades = ['A+', 'A', 'FAIL']
+
+
+// let goodGrades = grades.filter((element) => {
+//     console.log(element)
+//         if (element !== 'FAIL'){
+//         return true;}
+       
+        
+
+// })
+
+// console.log(goodGrades)
+
+
+
+// let grades = ['A+', 'A', 'FAIL']
+
+
+// let goodGrades = grades.filter(element => element !== 'FAIL')
+        
+// console.log(goodGrades)
+
+
+let grades = ['A+', 'A', 'FAIL']
+
+for (let i = 0; i < grades.length; ++i) {
+    console.log(grades[i])
 }
 
-
-console.log (convertCelsuisToFahrenheit(10));
