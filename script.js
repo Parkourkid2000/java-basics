@@ -395,7 +395,6 @@
 
 // console.log(users);
 
-
 // let users = [
 //        {
 //          username: "David",
@@ -414,7 +413,7 @@
 //         lessonsCompleted: [0, 1, 2, 3],
 //       },
 //      ];
-    
+
 //      function register(user) {
 //        users.push(user);
 //      }
@@ -426,20 +425,17 @@
 //        discordId: "megladon",
 //        lessonsCompleted: [0, 1],
 //      });
-    
+
 //      console.log(users);
 
-
 // //First way of accessing an element
-// console.log(document.querySelector('#title')); 
-
+// console.log(document.querySelector('#title'));
 
 // //Second way of accessing an element
 // console.log (document.getElementById('title'));
 
 // //Change HTML
 // document.querySelector('#title').innerHTML += ' Frontend Simplified'
-
 
 // //change CSS
 // document.querySelector('#title').style.fontSize = '40px'
@@ -450,6 +446,92 @@
 //     console.log('clicked');
 // }
 
-function toggleDarkMode() {
-document.querySelector('body').classList.toggle("dark-theme")
+// function toggleDarkMode() {
+// document.querySelector('body').classList.toggle("dark-theme")
+// }
+
+// PROMISES
+
+// (fetch ("https://jsonplaceholder.typicode.com/users/1"))
+// const emailRef = document.querySelector('.email');
+// console.log(emailRef);
+
+// // Then
+// (fetch ("https://jsonplaceholder.typicode.com/users/1")).then(response => {
+//     response.json().then(data => {
+//         console.log(data)
+//         emailRef.innerHTML = data.email;
+//     })
+// })
+
+// const emailRef = document.querySelector(".email");
+// // console.log(emailRef);
+// // // Then
+// // fetch("https://jsonplaceholder.typicode.com/users/1")
+// //   .then((response) => {
+// //     return response.json();
+// //   })
+// //   .then((data) => {
+// //     console.log(data);
+// //     emailRef.innerHTML = data.email
+// //   });
+
+// //Async/Await
+// async function main() {
+//     const response = await fetch("https://jsonplaceholder.typicode.com/users/1")
+//     const data = await response.json()
+//     console.log(data)
+//     emailRef.innerHTML = data.email
+// }
+
+// main()
+
+const statusRef = document.querySelector('.status')
+const videoRef = document.querySelector('.video')
+function getSubscriptionStatus() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(undefined)
+        }, 2000)
+    })
 }
+
+// //Then
+// // getSubscriptionStatus().then(response => console.log(response))
+
+
+// //Async/Await
+// async function main() {
+//  const status = await getSubscriptionStatus();
+// statusRef.innerHTML = status;
+// }
+
+main();
+
+function getVideo(subscriptionStatus) {
+    return new Promise((resolve, reject) => {
+        if (subscriptionStatus === 'VIP') {
+            resolve('show video')
+        }
+        else if  (subscriptionStatus === 'FREE') {
+            resolve('show trailer')
+        }
+        else {
+            reject('no video')
+        }
+    })
+}
+
+async function main() {
+    const status = await getSubscriptionStatus();
+    statusRef.innerHTML = status;
+    try {
+     console.log(await getVideo(status))
+    }
+    catch (e) {
+        console.log(e)
+        videoRef.innerHTML = e;
+    }
+}
+
+main();
