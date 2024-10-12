@@ -535,96 +535,335 @@
 
 // main();
 
-function addition(num1, num2) {
-  return num1 + num2;
-}
+// function addition(num1, num2) {
+//   return num1 + num2;
+// }
 
-console.log(addition(-3, -5));
+// console.log(addition(-3, -5));
 
-function hoursIntoSeconds(hour) {
-  return hour * 60 * 60;
-}
+// function hoursIntoSeconds(hour) {
+//   return hour * 60 * 60;
+// }
 
-console.log(hoursIntoSeconds(4));
+// console.log(hoursIntoSeconds(4));
 
-function calcPerimeter(length, width) {
-  return length * 2 + width * 2;
-}
+// function calcPerimeter(length, width) {
+//   return length * 2 + width * 2;
+// }
 
-console.log(calcPerimeter(10, 20));
+// console.log(calcPerimeter(10, 20));
 
-function calcTriangleArea(base, height) {
-  return base * height * 0.5;
-}
+// function calcTriangleArea(base, height) {
+//   return base * height * 0.5;
+// }
 
-console.log(calcTriangleArea(20, 20));
+// console.log(calcTriangleArea(20, 20));
 
-function extendString(string) {
-  return string + "Frontend";
-}
+// function extendString(string) {
+//   return string + "Frontend";
+// }
 
-console.log(extendString("pretty"));
+// console.log(extendString("pretty"));
 
-function sumGreaterThan100(num1, num2) {
-  //works the same as using an if/else statement because return already returns a boolean aka true or false
-  return num1 + num2 > 100;
-}
+// function sumGreaterThan100(num1, num2) {
+//   //works the same as using an if/else statement because return already returns a boolean aka true or false
+//   return num1 + num2 > 100;
+// }
 
-console.log(sumGreaterThan100(20, 100));
+// console.log(sumGreaterThan100(20, 100));
 
-function lessThanOrEqualToZero(number) {
-    return number <= 0;
-}
+// function lessThanOrEqualToZero(number) {
+//     return number <= 0;
+// }
 
-console.log( lessThanOrEqualToZero (3))
-
-
-function oppositeBoolean(boolean) {
-    return !boolean
-}
-
-console.log(oppositeBoolean (false));
-
-function isNotZero (element) {
-    return   element !== 0
-}
-
-console.log (isNotZero (0));
-
-function calcRemainder(num1, num2) {
-    return num1 % num2;
-}
-
-console.log(calcRemainder (10, 8));
+// console.log( lessThanOrEqualToZero (3))
 
 
-function isOdd(num1) {
-    return num1 % 2 !== 0;
-}
+// function oppositeBoolean(boolean) {
+//     return !boolean
+// }
 
-console.log(isOdd (3));
+// console.log(oppositeBoolean (false));
 
-function booleanInterger(num1) {
-    return num1 % 2 === 0 ? 1: -1
-}
+// function isNotZero (element) {
+//     return   element !== 0
+// }
 
-console.log(booleanInterger(4));
+// console.log (isNotZero (0));
 
-function isLoggedInAndSubscribed(string1, string2) {
-   return string1 === 'LOGGED_IN' && string2 === "SUBSCRIBED" 
+// function calcRemainder(num1, num2) {
+//     return num1 % num2;
+// }
+
+// console.log(calcRemainder (10, 8));
+
+
+// function isOdd(num1) {
+//     return num1 % 2 !== 0;
+// }
+
+// console.log(isOdd (3));
+
+// function booleanInterger(num1) {
+//     return num1 % 2 === 0 ? 1: -1
+// }
+
+// console.log(booleanInterger(4));
+
+// function isLoggedInAndSubscribed(string1, string2) {
+//    return string1 === 'LOGGED_IN' && string2 === "SUBSCRIBED" 
   
+// }
+
+// console.log(isLoggedInAndSubscribed ('LOGGED_IN', 'SUBSCRIBED'))
+
+
+
+// function isLoggedInORSubscribed(string1, string2) {
+//     return string1 === 'LOGGED_IN' || string2 === "SUBSCRIBED" 
+   
+//  }
+ 
+//  console.log(isLoggedInORSubscribed ('LOGGED_IN', 'SUBSCRIBED'));
+
+
+//  function filterOutFalsy (value1, value2) {
+//     return !value1 ? value1 : value2
+//  }
+
+//  console.log (filterOutFalsy ( 0, 'dog'));
+
+
+//  function arrLength (arr) {
+//      return arr[arr.length -1];
+//     }
+    
+//     console.log (arrLength ([6, 2, 3, 4, 5, 656]));
+
+
+//     function arrSum (arr) {
+//         let sum = 0;
+//         for (let i = 0; i < arr.length; ++i) {
+//             //how to loop through every element in an array
+//             //console.log (arr[i]);
+//             sum = sum + arr[i];
+//         }
+//         return sum;
+//     }
+
+// console.log (arrSum ([2, 3, 1, 4, 5, 3, 7, 9, 66]));
+
+
+
+// function progressiveSum (num) {
+//     let sum = 0;
+//     for (let i = 1; i <= num; ++i) {
+//         sum = sum + i;
+//     }
+//     return sum
+// }
+
+// console.log(progressiveSum(600));
+
+
+
+// function calcTime (seconds) {
+//     let timerMinutes = Math.floor(seconds / 60);
+//     let timerSeconds = seconds % 60;
+
+//     if (timerMinutes.toString().length === 1) {
+//         timerMinutes = '0' + timerMinutes;
+//     }
+
+//     if (timerSeconds.toString().length === 1) {
+//         timerSeconds = '0' + timerSeconds;
+//     }
+//     return timerMinutes + ':' + timerSeconds;
+// }
+
+// console.log (calcTime(900));
+
+
+// function getMax (arr) {
+//     let max = arr[0];
+// for (let i = 1; i < arr.length; ++i) {
+//    if (arr[i] > max) {
+//     max = arr[i];
+//    }
+// }
+// return max;
+
+// }
+
+// console.log (getMax([7, 5, 8, 12, 21, 4]));
+
+
+
+
+// function reverseString (string) {
+//     let reversedString = '';
+//     for (let i = string.length -1; i >= 0; --i) {
+//         reversedString += string[i];
+//     }
+//     return reversedString;
+// }
+
+// console.log (reverseString('Tesla'));
+
+
+
+
+// function reverseString (string) {
+//     return string.split('').reverse().join('');
+// }
+
+// console.log (reverseString('Tesla'));
+
+
+
+
+
+// function reverseString (string) {
+//     let reversedString = '';
+//     for (let i = 0; i < string.length; ++i) {
+//         reversedString = string[i] + reversedString;
+//     }
+//     return reversedString;
+// }
+
+// console.log (reverseString('Tesla'));
+
+/* ARRAY MAP LONG VERSION*/
+// let arr = [1, 4, 9, 16]
+
+// let newArray = arr.map((element) => {
+//     console.log(element)
+//     return element + 1;
+// })
+
+// console.log(newArray)
+
+/* ARRAY MAP SHORT VERSION */
+
+// let arr = [1, 4, 9, 16]
+
+// let newArray = arr.map(element => element + 1)
+
+// console.log(newArray)
+
+
+let arr = [2, 3, 4, 5, 2, 2, 4, 5];
+    
+let newArray = arr.map(element => element * 0);
+
+console.log(newArray);
+
+
+
+function convertToZeros(arr) {
+    let newArr = [];
+    for (let i = 0; i < arr.length; ++i) {
+        newArr[i] = 0
+    }
+    return newArr
 }
 
-console.log(isLoggedInAndSubscribed ('LOGGED_IN', 'SUBSCRIBED'))
+console.log(convertToZeros([2, 3, 4, 1, 5, 7]));
+
+
+function convertToZeros(arr) {
+    return new Array(arr.length).fill(0);
+}
+
+console.log(convertToZeros([1, 2, 3, 4, 5, 4, 67]));
+
+
+function convertToZeros (arr) {
+    return arr.map(elem => 0)
+}
+
+console.log(convertToZeros([2, 4, 3, 1]));
 
 
 
-function isLoggedInORSubscribed(string1, string2) {
-    return string1 === 'LOGGED_IN' || string2 === "SUBSCRIBED" 
-   
- }
- 
- console.log(isLoggedInORSubscribed ('LOGGED_IN', 'SUBSCRIBED'));
+
+// function removeApples (arr) {
+//     let noApples = []
+//     for (let i = 0; i < arr.length; ++i) {
+//         if (arr[i] !== 'Apple') {
+//            noApples.push(arr[i])
+//         }       
+//     }
+//     return noApples
 
 
- 
+// }
+// console.log(removeApples(['Banana', 'Apple', 'Orange', 'Apple']));
+
+function removeApples(arr) {
+    return arr.filter((element) => { return element !== 'Apple'})
+    // SAME AS: return arr.filter(element => element !== 'Apple')
+}
+
+console.log(removeApples(['Banana', 'Apple', 'Orange', 'Apple']));
+
+
+
+// function filterOutFalsy(arr) {
+//     return arr.filter(element => !!element === true)
+// }
+
+// console.log(filterOutFalsy(['', 0, 'Orange', 'Apple']));
+
+
+function filterOutFalsy(arr) {
+    let nofalsy = [];
+    for (let i = 0; i < arr.length; ++i) {
+        if (!!arr[i] === true) {
+          nofalsy.push(arr[i])
+        }
+    }
+    return nofalsy
+}
+
+console.log(filterOutFalsy(['', 0, 'Orange', 'Apple']));
+
+
+// function convertToBoolean(arr) {
+//     let trueOrFalse = []
+// for (let i = 0; i < arr.length; ++i) {
+//     if (!!arr[i] === true) {
+//         trueOrFalse.push(!!arr[i])
+//     }
+//     if (!!arr[i] === false) {
+//         trueOrFalse.push(!!arr[i])
+//     }
+    
+// }
+// return trueOrFalse
+// }
+
+// console.log(convertToBoolean([500, 0, 'David', '', true]));
+
+
+function convertToBoolean(arr) {
+return arr.map(elem => !!elem)
+}
+
+console.log(convertToBoolean([500, 0, 'David', '', true]));
+
+
+// function convertToBoolean(arr) {
+//     let trueOrFalse = []
+// for (let i = 0; i < arr.length; ++i) {
+//     return !!arr[i] === true ? trueOrFalse.push(!!arr[i]):trueOrFalse.push(!!arr[i])
+    
+// }
+// return trueOrFalse
+// }
+
+// console.log(convertToBoolean([500, 0, 'David', '', true]));
+
+
+
+
