@@ -486,19 +486,18 @@
 
 // main()
 
-const statusRef = document.querySelector('.status')
-const videoRef = document.querySelector('.video')
-function getSubscriptionStatus() {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(undefined)
-        }, 2000)
-    })
-}
+// const statusRef = document.querySelector('.status')
+// const videoRef = document.querySelector('.video')
+// function getSubscriptionStatus() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve(undefined)
+//         }, 2000)
+//     })
+// }
 
 // //Then
 // // getSubscriptionStatus().then(response => console.log(response))
-
 
 // //Async/Await
 // async function main() {
@@ -506,32 +505,126 @@ function getSubscriptionStatus() {
 // statusRef.innerHTML = status;
 // }
 
-main();
+// main();
 
-function getVideo(subscriptionStatus) {
-    return new Promise((resolve, reject) => {
-        if (subscriptionStatus === 'VIP') {
-            resolve('show video')
-        }
-        else if  (subscriptionStatus === 'FREE') {
-            resolve('show trailer')
-        }
-        else {
-            reject('no video')
-        }
-    })
+// function getVideo(subscriptionStatus) {
+//     return new Promise((resolve, reject) => {
+//         if (subscriptionStatus === 'VIP') {
+//             resolve('show video')
+//         }
+//         else if  (subscriptionStatus === 'FREE') {
+//             resolve('show trailer')
+//         }
+//         else {
+//             reject('no video')
+//         }
+//     })
+// }
+
+// async function main() {
+//     const status = await getSubscriptionStatus();
+//     statusRef.innerHTML = status;
+//     try {
+//      console.log(await getVideo(status))
+//     }
+//     catch (e) {
+//         console.log(e)
+//         videoRef.innerHTML = e;
+//     }
+// }
+
+// main();
+
+function addition(num1, num2) {
+  return num1 + num2;
 }
 
-async function main() {
-    const status = await getSubscriptionStatus();
-    statusRef.innerHTML = status;
-    try {
-     console.log(await getVideo(status))
-    }
-    catch (e) {
-        console.log(e)
-        videoRef.innerHTML = e;
-    }
+console.log(addition(-3, -5));
+
+function hoursIntoSeconds(hour) {
+  return hour * 60 * 60;
 }
 
-main();
+console.log(hoursIntoSeconds(4));
+
+function calcPerimeter(length, width) {
+  return length * 2 + width * 2;
+}
+
+console.log(calcPerimeter(10, 20));
+
+function calcTriangleArea(base, height) {
+  return base * height * 0.5;
+}
+
+console.log(calcTriangleArea(20, 20));
+
+function extendString(string) {
+  return string + "Frontend";
+}
+
+console.log(extendString("pretty"));
+
+function sumGreaterThan100(num1, num2) {
+  //works the same as using an if/else statement because return already returns a boolean aka true or false
+  return num1 + num2 > 100;
+}
+
+console.log(sumGreaterThan100(20, 100));
+
+function lessThanOrEqualToZero(number) {
+    return number <= 0;
+}
+
+console.log( lessThanOrEqualToZero (3))
+
+
+function oppositeBoolean(boolean) {
+    return !boolean
+}
+
+console.log(oppositeBoolean (false));
+
+function isNotZero (element) {
+    return   element !== 0
+}
+
+console.log (isNotZero (0));
+
+function calcRemainder(num1, num2) {
+    return num1 % num2;
+}
+
+console.log(calcRemainder (10, 8));
+
+
+function isOdd(num1) {
+    return num1 % 2 !== 0;
+}
+
+console.log(isOdd (3));
+
+function booleanInterger(num1) {
+    return num1 % 2 === 0 ? 1: -1
+}
+
+console.log(booleanInterger(4));
+
+function isLoggedInAndSubscribed(string1, string2) {
+   return string1 === 'LOGGED_IN' && string2 === "SUBSCRIBED" 
+  
+}
+
+console.log(isLoggedInAndSubscribed ('LOGGED_IN', 'SUBSCRIBED'))
+
+
+
+function isLoggedInORSubscribed(string1, string2) {
+    return string1 === 'LOGGED_IN' || string2 === "SUBSCRIBED" 
+   
+ }
+ 
+ console.log(isLoggedInORSubscribed ('LOGGED_IN', 'SUBSCRIBED'));
+
+
+ 
