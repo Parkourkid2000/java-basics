@@ -578,7 +578,6 @@
 
 // console.log( lessThanOrEqualToZero (3))
 
-
 // function oppositeBoolean(boolean) {
 //     return !boolean
 // }
@@ -597,7 +596,6 @@
 
 // console.log(calcRemainder (10, 8));
 
-
 // function isOdd(num1) {
 //     return num1 % 2 !== 0;
 // }
@@ -611,21 +609,18 @@
 // console.log(booleanInterger(4));
 
 // function isLoggedInAndSubscribed(string1, string2) {
-//    return string1 === 'LOGGED_IN' && string2 === "SUBSCRIBED" 
-  
+//    return string1 === 'LOGGED_IN' && string2 === "SUBSCRIBED"
+
 // }
 
 // console.log(isLoggedInAndSubscribed ('LOGGED_IN', 'SUBSCRIBED'))
 
-
-
 // function isLoggedInORSubscribed(string1, string2) {
-//     return string1 === 'LOGGED_IN' || string2 === "SUBSCRIBED" 
-   
-//  }
- 
-//  console.log(isLoggedInORSubscribed ('LOGGED_IN', 'SUBSCRIBED'));
+//     return string1 === 'LOGGED_IN' || string2 === "SUBSCRIBED"
 
+//  }
+
+//  console.log(isLoggedInORSubscribed ('LOGGED_IN', 'SUBSCRIBED'));
 
 //  function filterOutFalsy (value1, value2) {
 //     return !value1 ? value1 : value2
@@ -633,13 +628,11 @@
 
 //  console.log (filterOutFalsy ( 0, 'dog'));
 
-
 //  function arrLength (arr) {
 //      return arr[arr.length -1];
 //     }
-    
-//     console.log (arrLength ([6, 2, 3, 4, 5, 656]));
 
+//     console.log (arrLength ([6, 2, 3, 4, 5, 656]));
 
 //     function arrSum (arr) {
 //         let sum = 0;
@@ -653,8 +646,6 @@
 
 // console.log (arrSum ([2, 3, 1, 4, 5, 3, 7, 9, 66]));
 
-
-
 // function progressiveSum (num) {
 //     let sum = 0;
 //     for (let i = 1; i <= num; ++i) {
@@ -664,8 +655,6 @@
 // }
 
 // console.log(progressiveSum(600));
-
-
 
 // function calcTime (seconds) {
 //     let timerMinutes = Math.floor(seconds / 60);
@@ -683,7 +672,6 @@
 
 // console.log (calcTime(900));
 
-
 // function getMax (arr) {
 //     let max = arr[0];
 // for (let i = 1; i < arr.length; ++i) {
@@ -697,9 +685,6 @@
 
 // console.log (getMax([7, 5, 8, 12, 21, 4]));
 
-
-
-
 // function reverseString (string) {
 //     let reversedString = '';
 //     for (let i = string.length -1; i >= 0; --i) {
@@ -710,18 +695,11 @@
 
 // console.log (reverseString('Tesla'));
 
-
-
-
 // function reverseString (string) {
 //     return string.split('').reverse().join('');
 // }
 
 // console.log (reverseString('Tesla'));
-
-
-
-
 
 // function reverseString (string) {
 //     let reversedString = '';
@@ -751,63 +729,52 @@
 
 // console.log(newArray)
 
+// let arr = [2, 3, 4, 5, 2, 2, 4, 5];
 
-let arr = [2, 3, 4, 5, 2, 2, 4, 5];
-    
-let newArray = arr.map(element => element * 0);
+// let newArray = arr.map(element => element * 0);
 
-console.log(newArray);
+// console.log(newArray);
 
+// function convertToZeros(arr) {
+//     let newArr = [];
+//     for (let i = 0; i < arr.length; ++i) {
+//         newArr[i] = 0
+//     }
+//     return newArr
+// }
 
+// console.log(convertToZeros([2, 3, 4, 1, 5, 7]));
 
-function convertToZeros(arr) {
-    let newArr = [];
-    for (let i = 0; i < arr.length; ++i) {
-        newArr[i] = 0
-    }
-    return newArr
-}
+// function convertToZeros(arr) {
+//     return new Array(arr.length).fill(0);
+// }
 
-console.log(convertToZeros([2, 3, 4, 1, 5, 7]));
+// console.log(convertToZeros([1, 2, 3, 4, 5, 4, 67]));
 
+// function convertToZeros (arr) {
+//     return arr.map(elem => 0)
+// }
 
-function convertToZeros(arr) {
-    return new Array(arr.length).fill(0);
-}
-
-console.log(convertToZeros([1, 2, 3, 4, 5, 4, 67]));
-
-
-function convertToZeros (arr) {
-    return arr.map(elem => 0)
-}
-
-console.log(convertToZeros([2, 4, 3, 1]));
-
-
-
+// console.log(convertToZeros([2, 4, 3, 1]));
 
 // function removeApples (arr) {
 //     let noApples = []
 //     for (let i = 0; i < arr.length; ++i) {
 //         if (arr[i] !== 'Apple') {
 //            noApples.push(arr[i])
-//         }       
+//         }
 //     }
 //     return noApples
-
 
 // }
 // console.log(removeApples(['Banana', 'Apple', 'Orange', 'Apple']));
 
-function removeApples(arr) {
-    return arr.filter((element) => { return element !== 'Apple'})
-    // SAME AS: return arr.filter(element => element !== 'Apple')
-}
+// function removeApples(arr) {
+//     return arr.filter((element) => { return element !== 'Apple'})
+//     // SAME AS: return arr.filter(element => element !== 'Apple')
+// }
 
-console.log(removeApples(['Banana', 'Apple', 'Orange', 'Apple']));
-
-
+// console.log(removeApples(['Banana', 'Apple', 'Orange', 'Apple']));
 
 // function filterOutFalsy(arr) {
 //     return arr.filter(element => !!element === true)
@@ -815,19 +782,17 @@ console.log(removeApples(['Banana', 'Apple', 'Orange', 'Apple']));
 
 // console.log(filterOutFalsy(['', 0, 'Orange', 'Apple']));
 
+// function filterOutFalsy(arr) {
+//     let nofalsy = [];
+//     for (let i = 0; i < arr.length; ++i) {
+//         if (!!arr[i] === true) {
+//           nofalsy.push(arr[i])
+//         }
+//     }
+//     return nofalsy
+// }
 
-function filterOutFalsy(arr) {
-    let nofalsy = [];
-    for (let i = 0; i < arr.length; ++i) {
-        if (!!arr[i] === true) {
-          nofalsy.push(arr[i])
-        }
-    }
-    return nofalsy
-}
-
-console.log(filterOutFalsy(['', 0, 'Orange', 'Apple']));
-
+// console.log(filterOutFalsy(['', 0, 'Orange', 'Apple']));
 
 // function convertToBoolean(arr) {
 //     let trueOrFalse = []
@@ -838,32 +803,120 @@ console.log(filterOutFalsy(['', 0, 'Orange', 'Apple']));
 //     if (!!arr[i] === false) {
 //         trueOrFalse.push(!!arr[i])
 //     }
-    
+
 // }
 // return trueOrFalse
 // }
 
 // console.log(convertToBoolean([500, 0, 'David', '', true]));
 
+// function convertToBoolean(arr) {
+// return arr.map(elem => !!elem)
+// }
 
-function convertToBoolean(arr) {
-return arr.map(elem => !!elem)
-}
-
-console.log(convertToBoolean([500, 0, 'David', '', true]));
-
+// console.log(convertToBoolean([500, 0, 'David', '', true]));
 
 // function convertToBoolean(arr) {
 //     let trueOrFalse = []
 // for (let i = 0; i < arr.length; ++i) {
 //     return !!arr[i] === true ? trueOrFalse.push(!!arr[i]):trueOrFalse.push(!!arr[i])
-    
+
 // }
 // return trueOrFalse
 // }
 
 // console.log(convertToBoolean([500, 0, 'David', '', true]));
 
+//SOLUTION
+
+// function showRating(rating) {
+//     let ratings = "";
+// for (let i =0; i < Math.floor(rating); ++i) {
+//     ratings += "*"
+//     if (i !== Math.floor(rating) -1) {
+//         ratings += " "
+//     }
+// }
+// if (!Number.isInteger(rating)) {
+//     ratings += " .";
+// }
+// return ratings;
+// }
+
+// console.log(showRating(4.5));
+
+//PROBLEM
+
+function showRating(rating) {
+  //initialize an empty string
+  //Loop through the rounded down rating
+  //add a star for every iteration
+  //if its not the last iteration add a space
+  //if the number is not an interger
+  //add a full stop
+  //return it
+}
+
+console.log(showRating(3.5));
+
+// function sortLowToHigh(numbers) {
+//     return numbers.sort((a, b) => a - b);
+
+// }
+
+// console.log(sortLowToHigh([1, 5, 0, 10, 4]));
+
+// function sortHighToLow(numbers){
+// return numbers.sort((a, b) => b.price - a.price);
+// }
+
+// console.log(
+//     sortHighToLow([
+//     {id: 1, price: 50 },
+//     {id: 2, price: 0},
+//     {id: 3, price: 500},
+// ]));
+
+// async function postsByUser(userId) {
+//   const promise = await fetch("https://jsonplaceholder.typicode.com/posts");
+
+//     const result = await promise.json(); 
+
+//     const posts = result.filter(element => (element.userId === userId))
+
+//     console.log(posts)
+//   }
+
+// postsByUser(4);
+
+//THEN
+// fetch("https://jsonplaceholder.typicode.com/posts").then((response) => {
+//     console.log(response.json())
+// })
+// response.json().then(data => {
+//     console.log(data)
+// })
+
+//ASYNC AWAIT
+
+// async.function.main() {
+//     const response = await fetch("https://jsonplaceholder.typicode.com/posts)
+//         const data = await response.json()
+//         console.log(data)}
+//         main();
 
 
+async function firstSixIncomplete(completedStatus) {
+    for (let i = 0; i < 6; ++i) {
 
+    }
+    const promise = await fetch("https://jsonplaceholder.typicode.com/todos");
+  
+      const result = await promise.json(); 
+  
+      const incompletedTasks = result.filter(element => !element.completed).slice(0, 6)
+  
+      console.log(incompletedTasks)
+    }
+  
+  firstSixIncomplete(false);
