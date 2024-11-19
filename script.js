@@ -847,17 +847,17 @@
 
 //PROBLEM
 
-function showRating(rating) {
-  //initialize an empty string
-  //Loop through the rounded down rating
-  //add a star for every iteration
-  //if its not the last iteration add a space
-  //if the number is not an interger
-  //add a full stop
-  //return it
-}
+// function showRating(rating) {
+//   //initialize an empty string
+//   //Loop through the rounded down rating
+//   //add a star for every iteration
+//   //if its not the last iteration add a space
+//   //if the number is not an interger
+//   //add a full stop
+//   //return it
+// }
 
-console.log(showRating(3.5));
+// console.log(showRating(3.5));
 
 // function sortLowToHigh(numbers) {
 //     return numbers.sort((a, b) => a - b);
@@ -880,7 +880,7 @@ console.log(showRating(3.5));
 // async function postsByUser(userId) {
 //   const promise = await fetch("https://jsonplaceholder.typicode.com/posts");
 
-//     const result = await promise.json(); 
+//     const result = await promise.json();
 
 //     const posts = result.filter(element => (element.userId === userId))
 
@@ -905,18 +905,49 @@ console.log(showRating(3.5));
 //         console.log(data)}
 //         main();
 
+// async function firstSixIncomplete(completedStatus) {
+//     for (let i = 0; i < 6; ++i) {
 
-async function firstSixIncomplete(completedStatus) {
-    for (let i = 0; i < 6; ++i) {
+//     }
+//     const promise = await fetch("https://jsonplaceholder.typicode.com/todos");
 
-    }
-    const promise = await fetch("https://jsonplaceholder.typicode.com/todos");
-  
-      const result = await promise.json(); 
-  
-      const incompletedTasks = result.filter(element => !element.completed).slice(0, 6)
-  
-      console.log(incompletedTasks)
-    }
-  
-  firstSixIncomplete(false);
+//       const result = await promise.json();
+
+//       const incompletedTasks = result.filter(element => !element.completed).slice(0, 6)
+
+//       console.log(incompletedTasks)
+//     }
+
+//   firstSixIncomplete(false);
+
+// let num = 50;
+
+// function FizzBuzz() {
+//   for (let i = 1; i <= num; ++i) {
+//     if (i % 5 == 0 && i % 3 == 0) {
+//       console.log('FizzBuzz')
+//     }
+//     else if (i % 5 == 0) {
+//       console.log('Buzz')
+//     }
+//     else if (i % 3 == 0) {
+//       console.log('Fizz')
+//     }
+//     else console.log(i)
+    
+//   }
+// }
+
+// FizzBuzz()
+
+
+// function isPalindrome(string) {
+//   string = string.toLowerCase();
+//   string = string.replace(/[^a-z0-9]/g, '');
+//   const reversed = string.split('').reverse().join('');
+
+//   console.log(string === reversed)
+// }
+
+// isPalindrome('racecar');
+
