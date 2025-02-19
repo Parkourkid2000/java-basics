@@ -934,12 +934,11 @@
 //       console.log('Fizz')
 //     }
 //     else console.log(i)
-    
+
 //   }
 // }
 
 // FizzBuzz()
-
 
 // function isPalindrome(string) {
 //   string = string.toLowerCase();
@@ -950,4 +949,186 @@
 // }
 
 // isPalindrome('racecar');
+
+// function digitFrequency(n) {
+//     let frequencyMap = {};
+
+//     while (n > 0) {
+//         let digit = n % 10;  // Get the last digit
+//         frequencyMap[digit] = (frequencyMap[digit] || 0) + 1;  // Update frequency
+//         n = Math.floor(n / 10);  // Remove the last digit
+//     }
+
+//     return frequencyMap;
+// }
+
+// // Example usage
+// let n = 123321;
+// let result = digitFrequency(n);
+// console.log(reuslt);  // Output: { '1': 2, '2': 2, '3': 2 }
+
+// function decodeSecretMessage(docUrl) {
+//     // Fetch document content using a library like 'axios' or built-in fetch API
+//     fetch(docUrl)
+//     .then(response => response.text())
+//     .then(text => {
+//         const lines = text.split('\n');
+//         let grid = {}; // Object to store character positions
+
+//         // Parse each line in the document
+//         for (let line of lines) {
+//             const parts = line.trim().split(/\s+/);
+//             if (parts.length === 3) {
+//                 const char = String.fromCodePoint(parseInt(parts[0]));
+//                 const x = parseInt(parts[1]);
+//                 const y = parseInt(parts[2]);
+//                 grid[`${x},${y}`] = char;
+//             }
+//         }
+
+//         // Find grid dimensions
+//         let maxX = 0;
+//         let maxY = 0;
+//         for (let key in grid) {
+//             const coords = key.split(',');
+//             maxX = Math.max(maxX, parseInt(coords[0]));
+//             maxY = Math.max(maxY, parseInt(coords[1]));
+//         }
+
+//         // Print the grid, filling empty spaces with ' '
+//         for (let y = 0; y <= maxY; y++) {
+//             let row = '';
+//             for (let x = 0; x <= maxX; x++) {
+//                 row += grid[`${x},${y}`] || ' ';
+//             }
+//             console.log(row);
+//         }
+//     })
+//     .catch(error => console.error('Error fetching document:', error));
+// }
+
+// const docUrl = 'https://docs.google.com/document/d/e/2PACX-1vRMx5YQlZNa3ra8dYYxmv-QIQ3YJe8tbI3kqcuC7lQiZm-CSEznKfN_HYNSpoXcZIV3Y_O3YoUB1ecq/pub';
+// decodeSecretMessage(docUrl);
+
+// const doc = 'https://jsonplaceholder.typicode.com/todos/';
+
+// async function main(doc) {
+//     const response = await fetch(doc)
+//     const data = await response.json();
+//     console.log(data)
+// }
+
+// main(doc)
+
+// async function retrieveAndPrintGrid(url) {
+//     try {
+//       // Step 1: Fetch the document content
+//       const response = await fetch(url);
+//       const text = await response.text();
+
+//       // Step 2: Parse the HTML document to find the character data
+//       const parser = new DOMParser();
+//       const doc = parser.parseFromString(text, 'text/html');
+
+//       // We assume that each line of the document contains a specific entry with coordinates and Unicode characters
+//       const entries = doc.querySelectorAll('body p'); // Assume each line has a <p> tag
+
+//       // Initialize an empty map to store characters based on their coordinates
+//       const gridData = new Map();
+
+//       // Step 3: Parse the coordinates and Unicode characters from the entries
+//       entries.forEach(entry => {
+//         const text = entry.textContent.trim();
+//         const regex = /(\d+),(\d+)\s*=\s*(\S+)/; // Example: "3,2 = A"
+//         const match = text.match(regex);
+
+//         if (match) {
+//           const x = parseInt(match[1]);
+//           const y = parseInt(match[2]);
+//           const character = match[3];
+
+//           // Store the character in the grid
+//           gridData.set(`${x},${y}`, character);
+//         }
+//       });
+
+//       // Step 4: Determine the size of the grid
+//       let maxX = 0;
+//       let maxY = 0;
+//       gridData.forEach((_, key) => {
+//         const [x, y] = key.split(',').map(Number);
+//         maxX = Math.max(maxX, x);
+//         maxY = Math.max(maxY, y);
+//       });
+
+//       // Step 5: Build the grid and print it
+//       let grid = '';
+//       for (let y = 0; y <= maxY; y++) {
+//         let row = '';
+//         for (let x = 0; x <= maxX; x++) {
+//           const character = gridData.get(`${x},${y}`) || ' '; // Use space if not specified
+//           row += character;
+//         }
+//         grid += row + '\n'; // Add the row to the grid
+//       }
+
+//       // Step 6: Print the grid
+//       console.log(grid);
+
+//     } catch (error) {
+//       console.error('Error fetching or processing the Google Doc:', error);
+//     }
+//   }
+
+//   // Example usage:
+//   const docUrl = 'https://docs.google.com/document/d/e/2PACX-1vQGUck9HIFCyezsrBSnmENk5ieJuYwpt7YHYEzeNJkIb9OSDdx-ov2nRNReKQyey-cwJOoEKUhLmN9z/pub';
+//   retrieveAndPrintGrid(docUrl);
+
+async function printGridFromUrl(url) {
+  try {
+    const response = await fetch(url);
+    const html = await response.text();
+
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, "text/html");
+
+    const grid = {};
+    let maxX = 0;
+    let maxY = 0;
+
+    const rows = doc.querySelectorAll("tr");
+    rows.forEach((row) => {
+      const cells = row.querySelectorAll("td");
+      if (cells.length === 3) {
+        const x = parseInt(cells[0].textContent.trim(), 10);
+        const char = cells[1].textContent.trim();
+        const y = parseInt(cells[2].textContent.trim(), 10);
+
+        if (!isNaN(x) && !isNaN(y)) {
+          grid[`${x},${y}`] = char;
+          maxX = Math.max(maxX, x);
+          maxY = Math.max(maxY, y);
+        }
+      }
+    });
+
+    let gridOutput = "";
+    for (let y = 0; y <= maxY; y++) {
+      let row = "";
+      for (let x = 0; x <= maxX; x++) {
+        const char = grid[`${x},${y}`] || " ";
+        row += char;
+      }
+      gridOutput += row + "\n";
+    }
+
+    console.log(gridOutput);
+  } catch (error) {
+    console.error("An error occurred:", error);
+  }
+}
+
+const url =
+  "https://docs.google.com/document/d/e/2PACX-1vSHesOf9hv2sPOntssYrEdubmMQm8lwjfwv6NPjjmIRYs_FOYXtqrYgjh85jBUebK9swPXh_a5TJ5Kl/pub";
+printGridFromUrl(url);
 
